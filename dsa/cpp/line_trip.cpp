@@ -1,33 +1,61 @@
+/**
+ * @file line_trip.cpp
+ * @author Jonnie Shizuka (jtech2096@gmail.com)
+ * @brief - The solution to the problem Line Trip (https://codeforces.com/problemset/problem/1901/A)
+ * @version 0.1
+ * @status - 
+ * @date 2024-12-05
+ *
+ * @copyright Copyright (c) 2024
+ *
+ */
+
 #include <bits/stdc++.h>
+
+#define ll long long
+
 using namespace std;
 
-int main(){
-	int t;
+/**
+ * @brief The main function
+ *
+ * @return int
+ */
+
+int main(void) {
+	ios::sync_with_stdio(0);
+	cin.tie(0);
+
+	ll t;
 	cin >> t;
 
-	for(int i = 0; i < t; i++) {
-		int n, x;
-		int gas_max = 0;
+	while(t--) {
+		vector<ll> gases;
+
+		ll n,x;
 
 		cin >> n >> x;
-		vector<int> gas;
-		gas.push_back(0);
 
-		for(int i = 0; i < n; i++){
-			int num;
-			cin >> num;
-			gas.push_back(num);
-		}
-		
-		for(int i = gas.size()-1; i > 0; i-=2) {
-			gas_max += gas[i] - gas[i-1];	
 
-			if(gas[i] + gas[i-1] > x){
-				break;
-			}
+		while(n--) {
+			ll gas;
+			cin >> gas;
+			gases.push_back(gas);
 		}
 
-		cout << gas_max << endl;
+		ll temp = gases[0];
+
+		for(int i = 0; i < gases.size() - 1; i++) {
+			temp = max(temp, gases[i+1] - gases[i]);
+		}
+
+		if((x - gases[gases.size()-1]) * 2 > temp) {
+			temp =  (x - gases[gases.size()-1]) * 2;
+		}
+
+		cout << temp  << (t == 0 ? "" : "\n");
 	}
-	return 0;
+
+	
+	return (EXIT_SUCCESS);
 }

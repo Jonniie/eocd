@@ -1,7 +1,7 @@
 /**
  * @file aoc#1_Historial_Hysteria.cpp
  * @author Jonnie Shizuka (jtech2096@gmail.com)
- * @brief - The solution to the problem 
+ * @brief - The solution to the problem Historical Hysteria (https://adventofcode.com/2024/day/1)
  * @version 0.1
  * @status - 
  * @date 2024-12-01
