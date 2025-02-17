@@ -1,4 +1,4 @@
-function binary_encoder(n) {
+function binary_encoder(n, k) {
   let res = ["0"];
 
   let key = { 0: "01", 1: "10" };
@@ -15,7 +15,7 @@ function binary_encoder(n) {
     n--;
   }
 
-  return res.join("\n");
+  return +res.at(-1)[k - 1];
 }
 
-console.log(binary_encoder(5)); //'0\n01\n0110\n01101001'
+console.log(binary_encoder(5, 5)); //0110100110010110

@@ -16,9 +16,11 @@ function anagram_checker(str1, str2) {
     }
   }
 
-  for (let key in hm) {
-    if (hm[key] != 0) {
-      return false;
+  if (str1.length() > str2.length()) {
+    for (let key in hm) {
+      if (hm[key] != 0) {
+        return false;
+      }
     }
   }
 
