@@ -1,5 +1,5 @@
 /**
- * @file cassidoo_22-08-25.cpp
+ * @file cassidoo_22-09-25.cpp
  * @author Jonnie Shizuka (jtech2096@gmail.com)
  * @brief - The solution to the problem 
  * Write a function that determines if a number is abundant, deficient, perfect, or amicable. 
